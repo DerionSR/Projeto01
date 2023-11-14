@@ -1,0 +1,272 @@
+object CrClientes: TCrClientes
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro Cliente'
+  ClientHeight = 217
+  ClientWidth = 570
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 126
+    Height = 19
+    Caption = 'Nome Completo :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 33
+    Width = 32
+    Height = 19
+    Caption = 'RG :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 58
+    Width = 38
+    Height = 19
+    Caption = 'Rua :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 83
+    Width = 39
+    Height = 19
+    Caption = 'Pa'#237's :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 108
+    Width = 58
+    Height = 19
+    Caption = 'Estado :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 133
+    Width = 59
+    Height = 19
+    Caption = 'Cidade :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 184
+    Top = 29
+    Width = 38
+    Height = 19
+    Caption = 'CPF :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 180
+    Top = 58
+    Width = 30
+    Height = 19
+    Caption = 'N'#186' :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 288
+    Top = 58
+    Width = 53
+    Height = 19
+    Caption = 'Bairro :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 192
+    Top = 83
+    Width = 39
+    Height = 19
+    Caption = 'CEP :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 8
+    Top = 158
+    Width = 108
+    Height = 19
+    Caption = 'Nome da M'#227'e :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 257
+    Top = 158
+    Width = 101
+    Height = 19
+    Caption = 'Nome da Pai :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 140
+    Top = 8
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 46
+    Top = 31
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 53
+    Top = 58
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object Edit4: TEdit
+    Left = 53
+    Top = 81
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object Edit5: TEdit
+    Left = 72
+    Top = 108
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+  object Edit6: TEdit
+    Left = 72
+    Top = 133
+    Width = 121
+    Height = 21
+    TabOrder = 5
+  end
+  object Edit7: TEdit
+    Left = 228
+    Top = 31
+    Width = 121
+    Height = 21
+    TabOrder = 6
+  end
+  object Edit8: TEdit
+    Left = 216
+    Top = 58
+    Width = 57
+    Height = 21
+    TabOrder = 7
+  end
+  object Edit9: TEdit
+    Left = 347
+    Top = 58
+    Width = 121
+    Height = 21
+    TabOrder = 8
+  end
+  object Edit10: TEdit
+    Left = 237
+    Top = 85
+    Width = 121
+    Height = 21
+    TabOrder = 9
+  end
+  object Edit11: TEdit
+    Left = 122
+    Top = 160
+    Width = 121
+    Height = 21
+    TabOrder = 10
+  end
+  object Edit12: TEdit
+    Left = 364
+    Top = 160
+    Width = 121
+    Height = 21
+    TabOrder = 11
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 183
+    Width = 75
+    Height = 25
+    Caption = 'Cancelar'
+    TabOrder = 12
+  end
+  object Button2: TButton
+    Left = 479
+    Top = 184
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 13
+  end
+end

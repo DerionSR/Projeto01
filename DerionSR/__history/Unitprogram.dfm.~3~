@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Programa DerionSR'
+  ClientHeight = 239
+  ClientWidth = 584
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MenuInicial
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MenuInicial: TMainMenu
+    Left = 24
+    Top = 56
+    object Cadastros: TMenuItem
+      Caption = 'Cadastros'
+      object CrPaises: TMenuItem
+        Caption = 'Pa'#237'ses'
+      end
+      object CrEstados: TMenuItem
+        Caption = 'Estados'
+      end
+      object CrCidades: TMenuItem
+        Caption = 'Cidades'
+      end
+      object CrClientes: TMenuItem
+        Caption = 'Clientes'
+      end
+    end
+    object Consultas: TMenuItem
+      Caption = 'Consultas'
+      object ClPaises: TMenuItem
+        Caption = 'Pa'#237'ses'
+      end
+      object ClEstados: TMenuItem
+        Caption = 'Estados'
+      end
+      object ClCidades: TMenuItem
+        Caption = 'Cidades'
+      end
+      object ClClientes: TMenuItem
+        Caption = 'Clientes'
+      end
+    end
+    object Opcoes: TMenuItem
+      Caption = 'Op'#231#245'es'
+    end
+    object Sair: TMenuItem
+      Caption = 'Sair'
+    end
+  end
+end

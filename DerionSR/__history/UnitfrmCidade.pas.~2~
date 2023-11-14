@@ -1,0 +1,41 @@
+unit UnitfrmCidade;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, DB, Mask, DBCtrls, IBCustomDataSet, Grids, DBGrids,
+  IBDatabase, IBTable;
+
+type
+  TCrCidades = class(TForm)
+    Button1: TButton;
+    CCCancelar: TButton;
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTransaction1: TIBTransaction;
+    DBGrid1: TDBGrid;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1IDESTADO: TIntegerField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CrCidades: TCrCidades;
+
+implementation
+
+{$R *.dfm}
+
+end.

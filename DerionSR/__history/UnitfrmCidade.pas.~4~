@@ -1,0 +1,65 @@
+unit UnitfrmCidade;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, DB, Mask, DBCtrls, IBCustomDataSet, Grids, DBGrids,
+  IBDatabase, IBTable;
+
+type
+  TCrCidades = class(TForm)
+    CCSalvar: TButton;
+    CCCancelar: TButton;
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTransaction1: TIBTransaction;
+    DBGrid1: TDBGrid;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1IDESTADO: TIntegerField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    CCEditar: TButton;
+    CCExcluir: TButton;
+     procedure CUEditarClick(Sender: TObject);
+    procedure DBEdit4Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CrCidades: TCrCidades;
+
+implementation
+
+{$R *.dfm}
+
+procedure TCrCidade.CCEditarClick(Sender: TObject);
+begin
+try
+    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
+    begin
+        IBtable1.Edit;
+        IBtable1NOME.Value:=DBEdit2.Text;
+        IBtable1IDESTADO.Value:=DBEdit3.Text;
+        IBtable1.Post;
+        IBtable1.Close;
+        IBtable1.Open;
+        ShowMessage('Registro Editado!');
+    end;
+except
+      ShowMessage('Erro ao executar atualização!');
+
+end;
+
+end;
+
+end.

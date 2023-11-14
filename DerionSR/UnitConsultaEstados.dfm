@@ -1,0 +1,60 @@
+object ConEstados: TConEstados
+  Left = 0
+  Top = 0
+  Caption = 'Consultar Estados'
+  ClientHeight = 253
+  ClientWidth = 564
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ClEstadosLabel1: TLabel
+    Left = 28
+    Top = 8
+    Width = 137
+    Height = 19
+    Caption = 'Consultar Estados :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object ClEstadosEdit1: TEdit
+    Left = 171
+    Top = 8
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object ClEstadosStringGrid1: TStringGrid
+    Left = 28
+    Top = 48
+    Width = 525
+    Height = 145
+    ColCount = 4
+    TabOrder = 1
+  end
+  object ClEstadosButtonC: TButton
+    Left = 312
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'Consultar'
+    TabOrder = 2
+  end
+  object ClEstadosButtonL: TButton
+    Left = 392
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'Limpar'
+    TabOrder = 3
+  end
+end

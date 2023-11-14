@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/14 18:59:16.202.pas,C:\Users\Aluno\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unitprogram.pas</Transaction>
+    <Transaction>2023/09/14 18:59:16.202.dfm,C:\Users\Aluno\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unitprogram.dfm</Transaction>
+    <Transaction>2023/09/14 18:59:34.681.dproj,C:\Users\Aluno\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Projectcedup.dproj</Transaction>
+    <Transaction>2023/09/14 19:25:56.080.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmPais.pas</Transaction>
+    <Transaction>2023/09/14 19:25:56.080.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmPais.dfm</Transaction>
+    <Transaction>2023/09/14 20:01:32.036.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmEstado.pas</Transaction>
+    <Transaction>2023/09/14 20:01:32.036.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmEstado.dfm</Transaction>
+    <Transaction>2023/09/14 20:13:22.027.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmCidade.pas</Transaction>
+    <Transaction>2023/09/14 20:13:22.027.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmCidade.dfm</Transaction>
+    <Transaction>2023/09/14 20:18:59.704.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmCliente.pas</Transaction>
+    <Transaction>2023/09/14 20:18:59.704.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitfrmCliente.dfm</Transaction>
+    <Transaction>2023/09/19 19:15:08.135.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitConsultaPaises.pas</Transaction>
+    <Transaction>2023/09/19 19:15:08.137.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitConsultaPaises.dfm</Transaction>
+    <Transaction>2023/09/19 19:59:37.825.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitConsultaEstados.pas</Transaction>
+    <Transaction>2023/09/19 19:59:37.825.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitConsultaEstados.dfm</Transaction>
+    <Transaction>2023/09/19 20:10:04.924.pas,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.pas=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitConsultaCidades.pas</Transaction>
+    <Transaction>2023/09/19 20:10:04.924.dfm,C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\Unit2.dfm=C:\Users\Aluno\Desktop\MeuProjeto\DerionSR\UnitConsultaCidades.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

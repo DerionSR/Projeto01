@@ -1,0 +1,18 @@
+program Projectcedup;
+
+uses
+  Forms,
+  Unitprogram in 'Unitprogram.pas' {Form1},
+  UnitfrmPais in 'UnitfrmPais.pas' {CrPaises},
+  UnitfrmEstado in 'UnitfrmEstado.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TCrPaises, CrPaises);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
