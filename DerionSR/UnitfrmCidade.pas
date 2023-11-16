@@ -27,8 +27,10 @@ type
     CCExcluir: TButton;
     CCEditar: TButton;
     CCSalvar: TButton;
+    CCNovo: TButton;
     procedure CCEditarClick(Sender: TObject);
     procedure CCSalvarClick(Sender: TObject);
+    procedure CCNovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,7 +51,7 @@ end;
 procedure TCrCidades.CCEditarClick(Sender: TObject);
 begin
 try
-    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
+    if MessageBox(handle, 'Deseja editar o registro?','ATENÃ‡Ã‚O!' , mb_YESNo )= mrYes then
     begin
         IBtable1.Edit;
         IBtable1NOME.Value:=DBEdit2.Text;
@@ -60,19 +62,27 @@ try
         ShowMessage('Registro Editado!');
     end;
 except
-      ShowMessage('Erro ao executar atualização!');
+      ShowMessage('Erro ao executar atualizaÃ§Ã£o!');
 end;
 
+end;
+
+procedure TCrCidades.CCNovoClick(Sender: TObject);
+begin
+    IBTable1.Open;
+    IBTable1.Append;
+    DBEdit1.SetFocus;
 end;
 
 procedure TCrCidades.CCSalvarClick(Sender: TObject);
 begin
 
   try
+      if MessageBox(handle, 'Deseja salvar o registro','SALVANDO', mb_YesNo ) = mrYes then
       if IBTable1.state in [dsinsert] then
       begin
           IBTable1.Post;
-          CCSalvar.SetFocus;
+          CCNovo.SetFocus;
       end;
       IBTransaction1.ComitRetaining;
       IBTable1.Close;
