@@ -4,24 +4,38 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, UDN, Grids, DBGrids, Mask, DBCtrls;
+  Dialogs, StdCtrls, Grids, DBGrids, DB, Mask, DBCtrls, IBCustomDataSet,
+  IBDatabase, IBTable,;
 
 type
   TCrEstados = class(TForm)
-    SalvarCE: TButton;
-    CancelarCE: TButton;
-    DBGrid1: TDBGrid;
-    EditarCE: TButton;
-    ExcluirCE: TButton;
-    NovoCE: TButton;
-    Label3: TLabel;
+   CUCancelar: TButton;
+    Button2: TButton;
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTransaction1: TIBTransaction;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1UF: TIBStringField;
+    Label1: TLabel;
     DBEdit1: TDBEdit;
-    Label4: TLabel;
+    Label2: TLabel;
     DBEdit2: TDBEdit;
-    procedure EditarCEClick(Sender: TObject);
-    procedure NovoCEClick(Sender: TObject);
-    procedure SalvarCEClick(Sender: TObject);
-
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    DataSource1: TDataSource;
+    CUSalvar: TButton;
+    DBGrid1: TDBGrid;
+    CUExcluir: TButton;
+    CUEditar: TButton;
+    procedure CEEditarClick(Sender: TObject);
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Label2: TLabel;
   private
     { Private declarations }
   public
@@ -30,57 +44,30 @@ type
 
 var
   CrEstados: TCrEstados;
-  UmDM: TDataModule1;
 
 implementation
 
 {$R *.dfm}
 
-
-procedure TCrEstados.EditarCEClick(Sender: TObject);
+procedure TCrEstado.CEEditarClick(Sender: TObject);
 begin
-  try
-    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO' , mb_YESNo )= mrYes then
+try
+    if MessageBox(handle, 'Deseja editar o registro?','ATENÃ‡Ã‚O!' , mb_YESNo )= mrYes then
     begin
-      UmDM:=IBTableEstados.Edit;
-      UmDM:=IBTableEstadosNOME.Value:=DBEdit1;
-      UmDM:=IBTableEstadosIDPAISES.Value:DBEdit2;
-      UmDM:=IBTableEstados.Post;
-      UmDM:=IBTableEstados.Close;
-      UmDM:=IBTableEstados.Open;
-      ShowMessage('Registro Editado!');
+        IBtable1.Edit;
+        IBtable1NOME.Value:=DBEdit2.Text;
+        IBtable1UF.Value:=DBEdit3.Text;
+        IBtable1.Post;
+        IBtable1.Close;
+        IBtable1.Open;
+        ShowMessage('Registro Editado!');
     end;
-  except
-      ShowMessage('Erro ao executar atualização!;')
+except
+      ShowMessage('Erro ao executar atualizaÃ§Ã£o!');
 
-  finally
-
-  end;
 end;
 
-procedure TCrEstados.NovoCEClick(Sender: TObject);
-begin
-    UmDM:= TDataModule1.Create();
-    UmDM.IBTableEstados.Open;
-    UmDM.IBTableEstados.Append;
-    NovoCE.SetFocus;
-    UmDM.Destroy;
 end;
 
-procedure TCrEstados.SalvarCEClick(Sender: TObject);
-begin
- try
-      if MessageBox (handle, 'Deseja salvar o registro?','SALVANDO', mb_YesNo ) = mrYes then
-      if UmDM.IBTableEstados.State in (dsInsert) then
-    begin
-        UmDM.IBTableEstados.Post;
-        NovoCE.SetFocus;
-    end;
-    IBTransaction1.CommitRetaining;
-    UmDM.IBTableEstados.Close;
-    UmDM.IBTableEstados.Open;
-finally
-        IBTransaction1.RollbackRetaining;
-end;
 
 end.

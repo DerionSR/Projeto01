@@ -45,7 +45,7 @@ end;
 procedure TCrCidades.CCEditarClick(Sender: TObject);
 begin
 try
-    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
+    if MessageBox(handle, 'Deseja editar o registro?','ATENÃ‡Ã‚O!' , mb_YESNo )= mrYes then
     begin
         IBtable1.Edit;
         IBtable1NOME.Value:=DBEdit2.Text;
@@ -56,7 +56,7 @@ try
         ShowMessage('Registro Editado!');
     end;
 except
-      ShowMessage('Erro ao executar atualização!');
+      ShowMessage('Erro ao executar atualizaÃ§Ã£o!');
 end;
 
 end;
