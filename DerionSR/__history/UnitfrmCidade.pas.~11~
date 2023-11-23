@@ -9,7 +9,6 @@ uses
 
 type
   TCrCidades = class(TForm)
-    CCSalvar: TButton;
     CCCancelar: TButton;
     IBDatabase1: TIBDatabase;
     IBTable1: TIBTable;
@@ -25,8 +24,11 @@ type
     DBEdit2: TDBEdit;
     Label3: TLabel;
     DBEdit3: TDBEdit;
-    CCEditar: TButton;
     CCExcluir: TButton;
+    CCEditar: TButton;
+    CCSalvar: TButton;
+    procedure CCEditarClick(Sender: TObject);
+    procedure CCSalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +42,11 @@ implementation
 
 {$R *.dfm}
 
-procedure TCrCidade.CCEditarClick(Sender: TObject);
+end;
+
+end;
+
+procedure TCrCidades.CCEditarClick(Sender: TObject);
 begin
 try
     if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
@@ -55,9 +61,25 @@ try
     end;
 except
       ShowMessage('Erro ao executar atualização!');
+end;
 
 end;
 
+procedure TCrCidades.CCSalvarClick(Sender: TObject);
+begin
+
+  try
+      if IBTable1.state in [dsinsert] then
+      begin
+          IBTable1.Post;
+          CCSalvar.SetFocus;
+      end;
+      IBTransaction1.ComitRetaining;
+      IBTable1.Close;
+      IBTTable1.Open;
+  finally
+      IBTransaction1.RollbackRetaining;
+  end;
 end;
 
 end.

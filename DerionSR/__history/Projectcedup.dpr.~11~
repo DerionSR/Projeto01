@@ -9,8 +9,7 @@ uses
   UnitfrmCliente in 'UnitfrmCliente.pas' {CrClientes},
   UnitConsultaPaises in 'UnitConsultaPaises.pas' {ConPaises},
   UnitConsultaEstados in 'UnitConsultaEstados.pas' {ConEstados},
-  UnitConsultaCidades in 'UnitConsultaCidades.pas' {ConCidades},
-  UDN in 'UDN.pas' {DataModule1: TDataModule};
+  UnitConsultaCidades in 'UnitConsultaCidades.pas' {ConCidades};
 
 {$R *.res}
 
@@ -25,6 +24,5 @@ begin
   Application.CreateForm(TConPaises, ConPaises);
   Application.CreateForm(TConEstados, ConEstados);
   Application.CreateForm(TConCidades, ConCidades);
-  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

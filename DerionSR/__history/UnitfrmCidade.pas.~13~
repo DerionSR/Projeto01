@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, Mask, DBCtrls, IBCustomDataSet, Grids, DBGrids,
-  IBDatabase, IBTable, UDN;
+  IBDatabase, IBTable;
 
 type
   TCrCidades = class(TForm)
@@ -32,7 +32,6 @@ type
 
 var
   CrCidades: TCrCidades;
-  UmDM: TDataModule1;
 
 implementation
 

@@ -64,6 +64,7 @@ object CrPaises: TCrPaises
     Width = 380
     Height = 27
     DataField = 'NOME'
+    DataSource = DataSource1
     TabOrder = 2
   end
   object DBEdit3: TDBEdit
@@ -72,6 +73,7 @@ object CrPaises: TCrPaises
     Width = 45
     Height = 27
     DataField = 'SIGLA'
+    DataSource = DataSource1
     TabOrder = 3
   end
   object DBGrid1: TDBGrid
@@ -79,7 +81,6 @@ object CrPaises: TCrPaises
     Top = 224
     Width = 537
     Height = 128
-    DataSource = DataModule1.DataSourcePaises
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -100,7 +101,6 @@ object CrPaises: TCrPaises
     Font.Style = []
     ParentFont = False
     TabOrder = 5
-    OnClick = EditarCPClick
   end
   object ExcluirCP: TButton
     Left = 500
@@ -130,5 +130,72 @@ object CrPaises: TCrPaises
     ParentFont = False
     TabOrder = 7
     OnClick = NovoCPClick
+  end
+  object IBDatabase1: TIBDatabase
+    Connected = True
+    DatabaseName = 'C:\Users\Aluno\Desktop\Progeto BB\BD\CEDUP.FDB'
+    Params.Strings = (
+      'user_name=SYSDBA')
+    DefaultTransaction = IBTransaction1
+    Left = 440
+    Top = 16
+  end
+  object IBTable1: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'ID'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'NOME'
+        Attributes = [faRequired]
+        DataType = ftWideString
+        Size = 40
+      end
+      item
+        Name = 'SIGLA'
+        Attributes = [faRequired]
+        DataType = ftWideString
+        Size = 2
+      end>
+    IndexDefs = <
+      item
+        Name = 'PK_PAISES'
+        Fields = 'ID'
+        Options = [ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'PAISES'
+    Left = 456
+    Top = 88
+    object IBTable1ID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object IBTable1NOME: TIBStringField
+      FieldName = 'NOME'
+      Required = True
+      Size = 40
+    end
+    object IBTable1SIGLA: TIBStringField
+      FieldName = 'SIGLA'
+      Required = True
+      Size = 2
+    end
+  end
+  object IBTransaction1: TIBTransaction
+    Active = True
+    DefaultDatabase = IBDatabase1
+    Left = 520
+    Top = 16
+  end
+  object DataSource1: TDataSource
+    DataSet = IBTable1
+    Left = 528
+    Top = 80
   end
 end

@@ -1,0 +1,43 @@
+unit UDN;
+
+interface
+
+uses
+  SysUtils, Classes, DB, IBDatabase, IBCustomDataSet, IBTable;
+
+type
+  TDataModule1 = class(TDataModule)
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1SIGLA: TIBStringField;
+    IBTransaction1: TIBTransaction;
+    DataSource1: TDataSource;
+    DataSource2: TDataSource;
+    IBTable2: TIBTable;
+    IBTable3: TIBTable;
+    IntegerField1: TIntegerField;
+    IBStringField1: TIBStringField;
+    IBTable1IDESTADO: TIntegerField;
+    DataSource3: TDataSource;
+    IBTable4: TIBTable;
+    IntegerField2: TIntegerField;
+    IBStringField2: TIBStringField;
+    IBTable1USERNAME: TIBStringField;
+    IBTable1PASSWORD: TIBStringField;
+    DataSource4: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{$R *.dfm}
+
+end.

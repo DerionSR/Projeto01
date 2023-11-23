@@ -11,6 +11,13 @@ type
   TCrClientes = class(TForm)
     CUCancelar: TButton;
     Button2: TButton;
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTransaction1: TIBTransaction;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1USERNAME: TIBStringField;
+    IBTable1PASSWORD: TIBStringField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
@@ -19,6 +26,7 @@ type
     DBEdit3: TDBEdit;
     Label4: TLabel;
     DBEdit4: TDBEdit;
+    DataSource1: TDataSource;
     CUSalvar: TButton;
     DBGrid1: TDBGrid;
     CUExcluir: TButton;

@@ -2,7 +2,7 @@ object ConCidades: TConCidades
   Left = 0
   Top = 0
   Caption = 'Consultar Cidades'
-  ClientHeight = 493
+  ClientHeight = 249
   ClientWidth = 564
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

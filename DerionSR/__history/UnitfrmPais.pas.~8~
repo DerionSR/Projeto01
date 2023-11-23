@@ -5,12 +5,19 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, IBDatabase, IBCustomDataSet, IBTable, Mask, DBCtrls,
-  Grids, DBGrids, UDN;
+  Grids, DBGrids;
 
 type
   TCrPaises = class(TForm)
     SalvarCP: TButton;
     CancelarCP: TButton;
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTransaction1: TIBTransaction;
+    DataSource1: TDataSource;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1SIGLA: TIBStringField;
     Label2: TLabel;
     DBEdit2: TDBEdit;
     Label3: TLabel;
@@ -21,7 +28,6 @@ type
     NovoCP: TButton;
     procedure NovoCPClick(Sender: TObject);
     procedure SalvarCPClick(Sender: TObject);
-    procedure EditarCPClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,51 +36,32 @@ type
 
 var
   CrPaises: TCrPaises;
-  UmDM: TDataModule1;
 
 implementation
 
 {$R *.dfm}
 
-
-procedure TCrPaises.EditarCPClick(Sender: TObject);
-begin
-try
-    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO' , mb_YESNo )= mrYes then
-    begin
-      UmDM:=IBTablePaises.Edit;
-      UmDM:=IBTablePaisesNOME.Value:=DBEdit2;
-      UmDM:=IBTablePaisesSIGLA.Value:DBEdit3;
-      UmDM:=IBTablePaises.Post;
-      UmDM:=IBTablePaises.Close;
-      UmDM:=IBTablePaises.Open;
-      ShowMessage('Registro Editado!');
-    end;
-  except
-      ShowMessage('Erro ao executar atualização!;')
 end;
 
 procedure TCrPaises.NovoCPClick(Sender: TObject);
 begin
-     UmDM:= TDataModule1.Create();
-    UmDM.IBTablePaises.Open;
-    UmDM.IBTablePaises.Append;
-    NovoCP.SetFocus;
-    UmDM.Destroy;
+    IBTable1.Open;
+    IBTable1.Append;
+    DBEdit1.SetFocus;
 end;
 
 procedure TCrPaises.SalvarCPClick(Sender: TObject);
 begin
     try
       if MessageBox (handle, 'Deseja salvar o registro?','SALVANDO', mb_YesNo ) = mrYes then
-      if UmDM.IBTablePaises.State in (dsInsert) then
+      if IBTable1.State in (dsInsert) then
     begin
-        UmDM.IBTablePaises.Post;
+        IBTable1.Post;
         NovoCP.SetFocus;
     end;
     IBTransaction1.CommitRetaining;
-    UmDM.IBTablePaises.Close;
-    UmDM.IBTablePaises.Open;
+    IBTable1.Close;
+    IBTable1.Open;
 finally
         IBTransaction1.RollbackRetaining;
 end;

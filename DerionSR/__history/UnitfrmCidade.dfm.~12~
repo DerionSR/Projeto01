@@ -50,7 +50,7 @@ object CrCidades: TCrCidades
     Top = 288
     Width = 547
     Height = 182
-    DataSource = DataModule1.DataSourceCidades
+    DataSource = DataSource1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -64,6 +64,7 @@ object CrCidades: TCrCidades
     Width = 134
     Height = 21
     DataField = 'ID'
+    DataSource = DataSource1
     Enabled = False
     TabOrder = 2
   end
@@ -73,6 +74,7 @@ object CrCidades: TCrCidades
     Width = 342
     Height = 21
     DataField = 'NOME'
+    DataSource = DataSource1
     TabOrder = 3
   end
   object DBEdit3: TDBEdit
@@ -81,6 +83,7 @@ object CrCidades: TCrCidades
     Width = 134
     Height = 21
     DataField = 'IDESTADO'
+    DataSource = DataSource1
     TabOrder = 4
   end
   object CCExcluir: TButton
@@ -119,5 +122,72 @@ object CrCidades: TCrCidades
     Caption = '&Novo'
     TabOrder = 8
     OnClick = CCNovoClick
+  end
+  object IBDatabase1: TIBDatabase
+    DatabaseName = 'C:\Users\Aluno\Desktop\Progeto BB\BD\CEDUP.FDB'
+    Params.Strings = (
+      'user_name=SYSDBA')
+    LoginPrompt = False
+    DefaultTransaction = IBTransaction1
+    Left = 488
+    Top = 16
+  end
+  object IBTable1: TIBTable
+    Database = IBDatabase1
+    Transaction = IBTransaction1
+    FieldDefs = <
+      item
+        Name = 'ID'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'NOME'
+        Attributes = [faRequired]
+        DataType = ftWideString
+        Size = 50
+      end
+      item
+        Name = 'IDESTADO'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end>
+    IndexDefs = <
+      item
+        Name = 'FK_CIDADES_2'
+        Fields = 'IDESTADO'
+      end
+      item
+        Name = 'PK_CIDADES'
+        Fields = 'ID'
+        Options = [ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'CIDADES'
+    Left = 496
+    Top = 152
+    object IBTable1ID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object IBTable1NOME: TIBStringField
+      FieldName = 'NOME'
+      Required = True
+      Size = 50
+    end
+    object IBTable1IDESTADO: TIntegerField
+      FieldName = 'IDESTADO'
+      Required = True
+    end
+  end
+  object IBTransaction1: TIBTransaction
+    DefaultDatabase = IBDatabase1
+    Left = 488
+    Top = 80
+  end
+  object DataSource1: TDataSource
+    DataSet = IBTable1
+    Left = 488
+    Top = 200
   end
 end

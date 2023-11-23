@@ -50,7 +50,6 @@ object CrCidades: TCrCidades
     Top = 288
     Width = 547
     Height = 182
-    DataSource = DataModule1.DataSourceCidades
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

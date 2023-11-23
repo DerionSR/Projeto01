@@ -21,7 +21,6 @@ type
     NovoCP: TButton;
     procedure NovoCPClick(Sender: TObject);
     procedure SalvarCPClick(Sender: TObject);
-    procedure EditarCPClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,23 +35,6 @@ implementation
 
 {$R *.dfm}
 
-
-procedure TCrPaises.EditarCPClick(Sender: TObject);
-begin
-try
-    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO' , mb_YESNo )= mrYes then
-    begin
-      UmDM:=IBTablePaises.Edit;
-      UmDM:=IBTablePaisesNOME.Value:=DBEdit2;
-      UmDM:=IBTablePaisesSIGLA.Value:DBEdit3;
-      UmDM:=IBTablePaises.Post;
-      UmDM:=IBTablePaises.Close;
-      UmDM:=IBTablePaises.Open;
-      ShowMessage('Registro Editado!');
-    end;
-  except
-      ShowMessage('Erro ao executar atualização!;')
-end;
 
 procedure TCrPaises.NovoCPClick(Sender: TObject);
 begin

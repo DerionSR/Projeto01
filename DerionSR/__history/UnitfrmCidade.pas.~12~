@@ -5,14 +5,21 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, Mask, DBCtrls, IBCustomDataSet, Grids, DBGrids,
-  IBDatabase, IBTable, UDN;
+  IBDatabase, IBTable;
 
 type
   TCrCidades = class(TForm)
     CCCancelar: TButton;
+    IBDatabase1: TIBDatabase;
+    IBTable1: TIBTable;
+    IBTransaction1: TIBTransaction;
     DBGrid1: TDBGrid;
+    IBTable1ID: TIntegerField;
+    IBTable1NOME: TIBStringField;
+    IBTable1IDESTADO: TIntegerField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
     Label2: TLabel;
     DBEdit2: TDBEdit;
     Label3: TLabel;
@@ -32,7 +39,6 @@ type
 
 var
   CrCidades: TCrCidades;
-  UmDM: TDataModule1;
 
 implementation
 

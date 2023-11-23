@@ -67,6 +67,10 @@
 			<DCCReference Include="UnitConsultaCidades.pas">
 				<Form>ConCidades</Form>
 			</DCCReference>
+			<DCCReference Include="UDN.pas">
+				<Form>DataModule1</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

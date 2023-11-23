@@ -1,4 +1,4 @@
-unit UnitfrmCidade;
+unit UnitfrmEstado;
 
 interface
 
@@ -7,11 +7,12 @@ uses
   Dialogs, StdCtrls;
 
 type
-  TCrCidades = class(TForm)
+  TCrEstados = class(TForm)
     Label1: TLabel;
     Edit1: TEdit;
     Button1: TButton;
     Button2: TButton;
+    Label2: TLabel;
   private
     { Private declarations }
   public
@@ -19,7 +20,7 @@ type
   end;
 
 var
-  CrCidades: TCrCidades;
+  CrEstados: TCrEstados;
 
 implementation
 

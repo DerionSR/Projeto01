@@ -22,9 +22,6 @@ type
     CoEstados: TMenuItem;
     CoCidades: TMenuItem;
     CoClientes: TMenuItem;
-    u1: TMenuItem;
-    Usuario1: TMenuItem;
-    Desenvolvimento1: TMenuItem;
     procedure CPaisesClick(Sender: TObject);
     procedure CEstadosClick(Sender: TObject);
     procedure CCidadesClick(Sender: TObject);

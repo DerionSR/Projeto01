@@ -4,17 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Grids, DB, IBCustomDataSet, IBTable, DBGrids, IBDatabase;
+  Dialogs, StdCtrls, Grids;
 
 type
   TConEstados = class(TForm)
+    ClEstadosEdit1: TEdit;
+    ClEstadosLabel1: TLabel;
+    ClEstadosStringGrid1: TStringGrid;
     ClEstadosButtonC: TButton;
     ClEstadosButtonL: TButton;
-    IBDatabase1: TIBDatabase;
-    IBTransaction1: TIBTransaction;
-    DataSource1: TDataSource;
-    DBGrid1: TDBGrid;
-    IBTable1: TIBTable;
   private
     { Private declarations }
   public

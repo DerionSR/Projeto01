@@ -4,20 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, UDN, Grids, DBGrids, Mask, DBCtrls;
+  Dialogs, StdCtrls, UDN, Grids, DBGrids;
 
 type
   TCrEstados = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
     SalvarCE: TButton;
     CancelarCE: TButton;
     DBGrid1: TDBGrid;
     EditarCE: TButton;
     ExcluirCE: TButton;
     NovoCE: TButton;
-    Label3: TLabel;
-    DBEdit1: TDBEdit;
-    Label4: TLabel;
-    DBEdit2: TDBEdit;
+    Edit2: TEdit;
     procedure EditarCEClick(Sender: TObject);
     procedure NovoCEClick(Sender: TObject);
     procedure SalvarCEClick(Sender: TObject);
@@ -44,14 +44,8 @@ begin
     begin
       UmDM:=IBTableEstados.Edit;
       UmDM:=IBTableEstadosNOME.Value:=DBEdit1;
-      UmDM:=IBTableEstadosIDPAISES.Value:DBEdit2;
-      UmDM:=IBTableEstados.Post;
-      UmDM:=IBTableEstados.Close;
-      UmDM:=IBTableEstados.Open;
-      ShowMessage('Registro Editado!');
+      UmDM:=IBTableEstados
     end;
-  except
-      ShowMessage('Erro ao executar atualização!;')
 
   finally
 
