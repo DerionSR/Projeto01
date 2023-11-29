@@ -62,7 +62,7 @@ end;
 
 procedure TCrClientes.CUNovoClick(Sender: TObject);
 begin
-    UmDM:= TDataModule1.Create();
+     UmDM:= TDataModule1.Create();
     UmDM.IBTableUsuario.Open;
     UmDM.IBTableUsuario.Append;
     CUNovo.SetFocus;

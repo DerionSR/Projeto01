@@ -114,7 +114,6 @@ object DataModule1: TDataModule1
   object IBTableCidades: TIBTable
     Database = IBDatabase1
     Transaction = IBTransaction1
-    Active = True
     FieldDefs = <
       item
         Name = 'ID'
@@ -168,7 +167,6 @@ object DataModule1: TDataModule1
   object IBTableUsuario: TIBTable
     Database = IBDatabase1
     Transaction = IBTransaction1
-    Active = True
     FieldDefs = <
       item
         Name = 'ID'

@@ -11,11 +11,6 @@ type
   TCrClientes = class(TForm)
     CUCancelar: TButton;
     Button2: TButton;
-    CUSalvar: TButton;
-    DBGrid1: TDBGrid;
-    CUExcluir: TButton;
-    CUEditar: TButton;
-    CUNovo: TButton;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
@@ -24,7 +19,10 @@ type
     DBEdit3: TDBEdit;
     Label4: TLabel;
     DBEdit4: TDBEdit;
-    procedure CUNovoClick(Sender: TObject);
+    CUSalvar: TButton;
+    DBGrid1: TDBGrid;
+    CUExcluir: TButton;
+    CUEditar: TButton;
     procedure CUEditarClick(Sender: TObject);
     procedure CUSalvarClick(Sender: TObject);
   private
@@ -46,43 +44,36 @@ begin
 try
     if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
     begin
-        UmDM.IBTableUsuario.Edit;
-        UmDM.IBTableUsuarioNOME.Value:=DBEdit2.Text;
-        UmDM.IBTableUsuarioUSERNAME.Value:=DBEdit3.Text;
-        UmDM.IBTableUsuarioPASSWORD.Value:=DBEdit4.Text;
-        UmDM.IBTableUsuario.Post;
-        UmDM.IBTableUsuario.Close;
-        UmDM.IBTableUsuario.Open;
+        UmDM.IBtable1.Edit;
+        UmDM.IBtable1NOME.Value:=DBEdit2.Text;
+        UmDM.IBtable1USERNAME.Value:=DBEdit3.Text;
+        UmDM.IBtable1PASSWORD.Value:=DBEdit4.Text;
+        UmDM.IBtable1.Post;
+        UmDM.IBtable1.Close;
+        IBtable1.Open;
         ShowMessage('Registro Editado!');
     end;
 except
       ShowMessage('Erro ao executar atualização!');
-end;
+
 end;
 
-procedure TCrClientes.CUNovoClick(Sender: TObject);
-begin
-    UmDM:= TDataModule1.Create();
-    UmDM.IBTableUsuario.Open;
-    UmDM.IBTableUsuario.Append;
-    CUNovo.SetFocus;
-    UmDM.Destroy;
 end;
 
 procedure TCrClientes.CUSalvarClick(Sender: TObject);
 begin
 
   try
-      if UmDM.IBTableUsuario.State in [dsinsert] then
+      if IBTable1.State in [dsinsert] then
       begin
-          UmDM.IBTableUsuario.Post;
+          IBTable1.Post;
           CUSalvar.SetFocus;
       end;
-      UmDM.IBTransaction1.CommitRetaining;
-      UmDM.IBTableUsuario.Close;
-      UmDM.IBTableUsuario.Open;
+      IBTransaction1.CommitRetaining;
+      IBTable1.Close;
+      IBTable1.Open;
   finally
-      UmDM.IBTransaction1.RollbackRetaining;
+      IBTransaction1.RollbackRetaining;
   end;
 end;
 

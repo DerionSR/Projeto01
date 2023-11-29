@@ -11,11 +11,6 @@ type
   TCrClientes = class(TForm)
     CUCancelar: TButton;
     Button2: TButton;
-    CUSalvar: TButton;
-    DBGrid1: TDBGrid;
-    CUExcluir: TButton;
-    CUEditar: TButton;
-    CUNovo: TButton;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
@@ -24,6 +19,11 @@ type
     DBEdit3: TDBEdit;
     Label4: TLabel;
     DBEdit4: TDBEdit;
+    CUSalvar: TButton;
+    DBGrid1: TDBGrid;
+    CUExcluir: TButton;
+    CUEditar: TButton;
+    CUNovo: TButton;
     procedure CUNovoClick(Sender: TObject);
     procedure CUEditarClick(Sender: TObject);
     procedure CUSalvarClick(Sender: TObject);
@@ -46,13 +46,13 @@ begin
 try
     if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
     begin
-        UmDM.IBTableUsuario.Edit;
-        UmDM.IBTableUsuarioNOME.Value:=DBEdit2.Text;
-        UmDM.IBTableUsuarioUSERNAME.Value:=DBEdit3.Text;
-        UmDM.IBTableUsuarioPASSWORD.Value:=DBEdit4.Text;
-        UmDM.IBTableUsuario.Post;
-        UmDM.IBTableUsuario.Close;
-        UmDM.IBTableUsuario.Open;
+        UmDM.IBtableUsuario.Edit;
+        UmDM.IBtableUsuarioNOME.Value:=DBEdit2.Text;
+        UmDM.IBtableUsuarioUSERNAME.Value:=DBEdit3.Text;
+        UmDM.IBtableUsuarioPASSWORD.Value:=DBEdit4.Text;
+        UmDM.IBtableUsuario.Post;
+        UmDM.IBtableUsuario.Close;
+        UmDM.IBtableUsuario.Open;
         ShowMessage('Registro Editado!');
     end;
 except
@@ -62,7 +62,7 @@ end;
 
 procedure TCrClientes.CUNovoClick(Sender: TObject);
 begin
-    UmDM:= TDataModule1.Create();
+     UmDM:= TDataModule1.Create();
     UmDM.IBTableUsuario.Open;
     UmDM.IBTableUsuario.Append;
     CUNovo.SetFocus;

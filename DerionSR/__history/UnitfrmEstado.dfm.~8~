@@ -42,6 +42,7 @@ object CrEstados: TCrEstados
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnClick = SalvarCEClick
   end
   object CancelarCE: TButton
     Left = 8
@@ -83,6 +84,7 @@ object CrEstados: TCrEstados
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = EditarCEClick
   end
   object ExcluirCE: TButton
     Left = 492
@@ -111,6 +113,7 @@ object CrEstados: TCrEstados
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = NovoCEClick
   end
   object DBEdit1: TDBEdit
     Left = 107
