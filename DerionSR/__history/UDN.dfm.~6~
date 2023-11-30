@@ -110,19 +110,6 @@ object DataModule1: TDataModule1
     TableName = 'ESTADOS'
     Left = 384
     Top = 152
-    object IBTableEstadosID: TIntegerField
-      FieldName = 'ID'
-      Required = True
-    end
-    object IBTableEstadosNOME: TIBStringField
-      FieldName = 'NOME'
-      Required = True
-      Size = 50
-    end
-    object IBTableEstadosIDPAISES: TIntegerField
-      FieldName = 'IDPAISES'
-      Required = True
-    end
   end
   object IBTableCidades: TIBTable
     Database = IBDatabase1

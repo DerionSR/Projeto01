@@ -109,7 +109,7 @@ object CrClientes: TCrClientes
     Height = 25
     Caption = '&Novo'
     TabOrder = 6
-    OnClick = CUNovoClick
+    OnClick = CUEditarClick
   end
   object DBEdit1: TDBEdit
     Left = 83

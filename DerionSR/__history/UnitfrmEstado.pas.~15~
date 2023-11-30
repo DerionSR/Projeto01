@@ -42,7 +42,7 @@ try
     begin
         UmDM.IBTableEstados.Edit;
         UmDM.IBTableEstadosNOME.Value:=DBEdit2.Text;
-        UmDM.IBTableEstadosIDPAISES.Value:=DBEdit3.Text;
+        UmDM.IBTableEstadosUF.Value:=DBEdit3.Text;
         UmDM.IBTableEstados.Post;
         UmDM.IBTableEstados.Close;
         UmDM.IBTableEstados.Open;

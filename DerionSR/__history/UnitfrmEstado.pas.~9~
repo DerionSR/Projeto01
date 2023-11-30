@@ -30,19 +30,6 @@ implementation
 
 procedure TCrEstado.CEEditarClick(Sender: TObject);
 begin
-try
-    if MessageBox(handle, 'Deseja editar o registro?','ATENÇÂO!' , mb_YESNo )= mrYes then
-    begin
-        IBtable1.Edit;
-        IBtable1NOME.Value:=DBEdit2.Text;
-        IBtable1UF.Value:=DBEdit3.Text;
-        IBtable1.Post;
-        IBtable1.Close;
-        IBtable1.Open;
-        ShowMessage('Registro Editado!');
-    end;
-except
-      ShowMessage('Erro ao executar atualização!');
 
 end;
 

@@ -1,0 +1,36 @@
+﻿unit UnitfrmEstado;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Grids, DBGrids, DB, Mask, DBCtrls, IBCustomDataSet,
+  IBDatabase, IBTable, UDN;
+
+type
+  TCrEstados = class(TForm)
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    DBGrid1: TDBGrid;
+    procedure CEEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CrEstados: TCrEstados;
+
+implementation
+
+{$R *.dfm}
+
+
+
+
+
+
+end.

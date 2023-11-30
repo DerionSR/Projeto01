@@ -9,14 +9,12 @@ uses
 
 type
   TCrEstados = class(TForm)
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    Label4: TLabel;
     DBGrid1: TDBGrid;
     NovoCE: TButton;
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
-    Estado: TLabel;
-    DBEdit2: TDBEdit;
-    Label5: TLabel;
-    DBEdit3: TDBEdit;
     procedure EditarCEClick(Sender: TObject);
     procedure NovoCEClick(Sender: TObject);
     procedure SalvarCEClick(Sender: TObject);
@@ -42,7 +40,7 @@ try
     begin
         UmDM.IBTableEstados.Edit;
         UmDM.IBTableEstadosNOME.Value:=DBEdit2.Text;
-        UmDM.IBTableEstadosIDPAISES.Value:=DBEdit3.Text;
+        UmDM.IBTableEstadosUF.Value:=DBEdit3.Text;
         UmDM.IBTableEstados.Post;
         UmDM.IBTableEstados.Close;
         UmDM.IBTableEstados.Open;

@@ -68,7 +68,7 @@ procedure TCrPaises.SalvarCPClick(Sender: TObject);
 begin
     try
       if MessageBox (handle, 'Deseja salvar o registro?','SALVANDO', mb_YesNo ) = mrYes then
-        if UmDM.IBTablePaises.State in [dsInsert] then
+        if UmDM.IBTablePaises.State in (dsInsert) then
         begin
           UmDM.IBTablePaises.Post;
           NovoCP.SetFocus;

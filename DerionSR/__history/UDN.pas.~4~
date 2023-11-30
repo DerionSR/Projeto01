@@ -27,9 +27,6 @@ type
     IBTable1USERNAME: TIBStringField;
     IBTable1PASSWORD: TIBStringField;
     DataSourceUsuario: TDataSource;
-    IBTableEstadosID: TIntegerField;
-    IBTableEstadosNOME: TIBStringField;
-    IBTableEstadosIDPAISES: TIntegerField;
   private
     { Private declarations }
   public
